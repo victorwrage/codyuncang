@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name"> 云仓COD</string>
+
+    <!-- Login Activity -->
+    <string name="login_label_username">帐号</string>
+    <string name="login_label_password">密码</string>
+    <string name="login_username_hint"></string>
+    <string name="login_label_signin">登录</string>
+    <string name="exit_hint">再按一次退出程序</string>
+    <string name="name_is_null">账号为空</string>
+    <string name="password_is_null">密码为空</string>
+    <string name="password_is_wrong">密码不正确</string>
+    <string name="password_c_is_null">重复密码为空</string>
+    <string name="chname_is_null">中文姓名为空</string>
+    <string name="email_is_null">邮箱为空</string>
+    <string name="password_c_not_identical">重复密码不一致</string>
+    <string name="password_is_not_correct">密码不正确</string>
+    <string name="new_password_is_not_null">新密码为空</string>
+    <string name="phone_is_null">手机号码为空</string>
+    <string name="phone_check_is_less_6">验证码少于6位</string>
+    <string name="phone_check_is_null">验证码为空</string>
+    <string name="date_is_null">日期为空</string>
+    <string name="alipay_is_null">支付宝账号为空</string>
+    <string name="chname_must_be_chinese">姓名必须是中文</string>
+    <string name="phone_is_wrong">请输入正确手机号码</string>
+
+    <string name="WX_share_title">收款宝分享</string>
+    <string name="WX_share_content">邀请您使用收款宝APP,收款宝方便您线上线下收款</string>
+
+
+    <string name="scan">正在扫码</string>
+    <string name="scan_tip"></string>
+    <string name="torch_on">打开闪光灯</string>
+    <string name="torch_off">关闭闪光灯</string>
+    <string name="title_activity_root">RootActivity</string>
+    <string name="title_activity_base">BaseActivity</string>
+
+</resources>
