@@ -17,6 +17,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 /**
  * Created by xyl on 2017/4/6.
@@ -24,12 +25,12 @@ import retrofit2.http.Query;
 
 public interface IRequestMode {
 
-    @POST("zsap_pos?sap-client=500&method=ZCOD_ORDER_INFO")
-    Observable<SynergyCustomerOrderInfo> QueryOrder(@Body SynergyRequest synergyRequest);
+    @POST
+    Observable<SynergyCustomerOrderInfo> QueryOrder(@Url String url,@Body SynergyRequest synergyRequest);
 
 
-    @POST("zsap_pos?sap-client=500&method=ZCOD_PAYMENT_RET")
-    Observable<SynergyPayBackResult> SendPay(@Body SynergyPayBack synergyPayBack);
+    @POST
+    Observable<SynergyPayBackResult> SendPay(@Url String url,@Body SynergyPayBack synergyPayBack);
 
     @GET("synergyMallServcie/order/getDetailByScmForZDW.jhtml?")
     Observable<SynergyMallResponse> SendPayToMall(@Query("ddh") String ddh);

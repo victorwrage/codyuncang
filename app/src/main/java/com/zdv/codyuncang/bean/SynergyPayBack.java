@@ -30,7 +30,26 @@ public class SynergyPayBack {
         String pay_money;
         String re_money;
         String dmbtr;
-        String bank_num;
+
+        String BANK_NUM;
+        String PATCH_NUM;
+        public String getBANK_NUM() {
+            return BANK_NUM;
+        }
+
+        public void setBANK_NUM(String BANK_NUM) {
+            this.BANK_NUM = BANK_NUM;
+        }
+
+        public String getPATCH_NUM() {
+            return PATCH_NUM;
+        }
+
+        public void setPATCH_NUM(String PATCH_NUM) {
+            this.PATCH_NUM = PATCH_NUM;
+        }
+
+
         String pay_mode;
 
         public String getPay_mode() {
@@ -76,13 +95,6 @@ public class SynergyPayBack {
             this.dmbtr = dmbtr;
         }
 
-        public String getBank_num() {
-            return bank_num;
-        }
-
-        public void setBank_num(String bank_num) {
-            this.bank_num = bank_num;
-        }
 
 
         public String getKunnr() {
@@ -137,7 +149,7 @@ public class SynergyPayBack {
         public String toString() {
             return "kunnr:"+kunnr+"vbeln:"+vbeln+"pos_num:"+pos_num+"pay_day:"+pay_day+
                     "pay_time:"+pay_time+"name1:"+name1+"pay_person:"+pay_person+"pay_money:"+pay_money
-                    +"dmbtr:"+dmbtr+"bank_num:"+bank_num;
+                    +"dmbtr:"+dmbtr;
         }
     }
 }

@@ -2,22 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffe5e5e5"
+    android:background="@color/cod_bg"
     android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/head_rl_calculator"
         android:layout_width="match_parent"
+        android:background="@color/cod_tab_bg"
         android:layout_height="45.0dip">
 
-
-        <TextView
+        <RelativeLayout
             android:id="@+id/pay_back"
-            android:layout_width="20.0dip"
-            android:layout_height="20.0dip"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10.0dip"
-            android:background="@drawable/btn_back" />
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/big_btn_backgroud_blue">
+
+            <ImageView
+
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/btn_back" />
+        </RelativeLayout>
 
 
         <TextView
@@ -26,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:text="支付页面"
+            android:text="支付(云仓COD)"
             android:textColor="#ff000000"
             android:textSize="15.0sp" />
     </RelativeLayout>
@@ -148,7 +155,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_marginTop="10dp"

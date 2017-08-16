@@ -2,7 +2,9 @@
 <resources>
 
 
-
+    <color name="cod_txt">#377eb4</color>
+    <color name="cod_bg">#e1e4eb</color>
+    <color name="cod_tab_bg">#f2f3f6</color>
     <color name="shebei">#ffffff</color>
     <color name="qiandao">#1484c6</color>
     <color name="table">#793843</color>
@@ -188,4 +190,9 @@
     <color name="mediumblue">#0000CD</color> <!--中兰色 -->
     <color name="darkblue">#00008B</color> <!--暗蓝色 -->
 
+    <color name="chutou_txt">#d96c2b</color>
+    <color name="chutou_check_txt">#707070</color>
+    <color name="chutou_pay_back">#F7F2F8</color>
+    <color name="chutou_item_txt">#EFEFEF</color>
+    <color name="chutou_btn_back">#DF4D1E</color>
 </resources>

@@ -14,6 +14,7 @@ import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 /**
  * Info:接口实现类
@@ -25,13 +26,13 @@ public class RequestModelImpl implements IRequestMode {
     IRequestMode iRequestMode;
 
     @Override
-    public Observable<SynergyCustomerOrderInfo> QueryOrder(@Body SynergyRequest synergyRequest) {
-        return iRequestMode.QueryOrder(synergyRequest);
+    public Observable<SynergyCustomerOrderInfo> QueryOrder(@Url String url,@Body SynergyRequest synergyRequest) {
+        return iRequestMode.QueryOrder(url,synergyRequest);
     }
 
     @Override
-    public Observable<SynergyPayBackResult> SendPay(@Body SynergyPayBack synergyPayBack) {
-        return iRequestMode.SendPay(synergyPayBack);
+    public Observable<SynergyPayBackResult> SendPay(@Url String url,@Body SynergyPayBack synergyPayBack) {
+        return iRequestMode.SendPay(url,synergyPayBack);
     }
 
     @Override

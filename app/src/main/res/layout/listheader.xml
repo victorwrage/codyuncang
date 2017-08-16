@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
+        android:visibility="visible"
         android:textColor="#000000"
-        android:text="折后金额"/>
+        android:text="应付金额"/>
 </LinearLayout>

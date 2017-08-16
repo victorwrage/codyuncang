@@ -15,6 +15,4 @@ public interface ILoginView extends IView{
      */
     void ResolveLoginInfo(xml_login_info_root info);
 
-     void showWaitDialog() ;
-     void hideWaitDialog() ;
 }

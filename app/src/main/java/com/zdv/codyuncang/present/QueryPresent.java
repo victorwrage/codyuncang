@@ -1,9 +1,10 @@
 package com.zdv.codyuncang.present;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
+import android.support.v4.app.Fragment;
 
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.zdv.codyuncang.bean.CheckPayInfo;
 import com.zdv.codyuncang.bean.LoginInfoRequest;
 import com.zdv.codyuncang.bean.PayInfo;
@@ -18,11 +19,11 @@ import com.zdv.codyuncang.bean.xml_pay_info_root;
 import com.zdv.codyuncang.model.IRequestMode;
 import com.zdv.codyuncang.model.converter.CustomGsonConverter;
 import com.zdv.codyuncang.model.converter.CustomXmlConverter;
+import com.zdv.codyuncang.utils.Constant;
 import com.zdv.codyuncang.view.ILoginView;
 import com.zdv.codyuncang.view.IOrderView;
 import com.zdv.codyuncang.view.IPayView;
 import com.zdv.codyuncang.view.IView;
-import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -110,7 +111,7 @@ public class QueryPresent implements IRequestPresent {
     @Override
     public void QueryOder(SynergyRequest synergyRequest) {
 
-        iRequestMode.QueryOrder(synergyRequest)
+        iRequestMode.QueryOrder(Constant.URL_SYNERGY +"zsap_pos?sap-client="+ Constant.URL_SYNERGY_PARAM+"&method=ZCOD_ORDER_INFO", synergyRequest)
                 .onErrorReturn(s -> new SynergyCustomerOrderInfo())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -119,7 +120,7 @@ public class QueryPresent implements IRequestPresent {
 
     @Override
     public void SendPay(SynergyPayBack synergyPayBack) {
-        iRequestMode.SendPay(synergyPayBack)
+        iRequestMode.SendPay(Constant.URL_SYNERGY+"zsap_pos?sap-client="+Constant.URL_SYNERGY_PARAM+"&method=ZCOD_PAYMENT_RET",synergyPayBack)
                 .onErrorReturn(s -> new SynergyPayBackResult())
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
